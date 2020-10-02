@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="utf-8">
+	<title>Formularz</title>
+	<style>
+		fieldset{
+			display: flex;
+			margin-bottom: 1em;
+		}
+		input{
+			margin-bottom: 1em;
+			margin-left: 1em;
+			margin-right: 1em;
+		}
+		body {
+		  	font-family: 'Anaheim';
+		  	font-size: 1.2em;
+		}
+		main{
+			width: 100%;
+			min-width: 15em;
+		}
+
+		.page-content{
+			display: flex;
+			width: 100%;
+		}
+
+		.left-background{
+			width: 15%;
+			border: 1px solid;
+		}
+
+		.right-background{
+			width: 15%;
+			border: 1px solid;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="page-content" class="page-content">
+		<div id="left-backgroud" class="left-background"></div>
+		<main>
+			<form>
+				<fieldset id="personal-details">
+					<legend>Personal details</legend>
+					<label>Name:<input type="text" name="name" maxlength="50" placeholder="Name" required></label>
+					<label>Adres:<input type="text" name="address" id="address" maxlength="60" placeholder="Address" required></label>
+					<label>E-mail:<input type="email" name="email" maxlength="30" placeholder="E-mail" required></label>
+					<label>Numer telefonu:<input type="tel" name="phone-number" maxlength="15" placeholder="Phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></label>
+					<label>Twoje IQ:<input type="number" name="iq" maxlength="3" placeholder="Your IQ" required></label>
+					<label><input type="radio" name="gender" value="Male">Mężczyzna</label>
+					<label><input type="radio" name="gender" value="Female">Kobieta</label>
+					<label><input type="radio" name="gender" value="Other">Inne</label>
+					<label><input type="date" name="outgoing-date" value="2017-01-14" required>Data wyjścia:</label>		
+				</fieldset>
+
+				<fieldset>
+					<label>Zaznacz wszystko co jest prawdziwe na teamt Twojej osoby:</label>
+					<label><input type="checkbox" name="tattoo">Mam tatuaże</label>
+					<label><input type="checkbox" name="job">Pracuję na pełen etat</label>
+					<label><input type="checkbox" name="parents">Moi rodzice są bogaci</label>
+				</fieldset>
+
+				<fieldset>
+					<label>Opcja polityczna <select required>
+						<option>Lewica</option>
+						<option>Centrum</option>
+						<option>Prawica</option>
+					</select></label>
+
+					<label>Ukoćzony poziom edukacji <select required>
+						<option>Podstawowy</option>
+						<option>Średni</option>
+						<option>Zawodowy</option>
+						<option>Wyższy</option>
+					</select></label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Sekcja opisowa</legend>
+
+					<label>Wyjaśnij dlaczego<br> <textarea name="explanation" rows="4" cols="45" placeholder="Zostaw komentarz" required></textarea> </label>
+				</fieldset>
+				<input type="file" name="photo" value="Załącznik">
+				<input type="submit" name="Submit" value="Send your application">
+			</form>
+			
+		</main>
+		<div id="right-backgroud" class="right-background"></div>
+	</div>
+	
+
+</body>
+</html>
